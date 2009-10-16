@@ -6,6 +6,8 @@ minumum of syntactic noise.
 
 It is not industrial strength, the main emphasis is on prototyping and testing 
 graph algorithms. Graphs can be built quickly and individual nodes can contain 
+an arbitrary data type. Even anonymous types are alowed through the builder
+interface (see below for an example).
 
 h1. Examples
 

@@ -11,6 +11,7 @@ h1. Examples
 
 h3. Simple Cyclic Graph
 
+<pre><code>
           [x]
           / \
        [y]   [w]
@@ -21,7 +22,7 @@ h3. Simple Cyclic Graph
         |      | \
        [c]    [e] [f]
               
-<pre><code>
+
     var g1 = Graph.Node("a",
                Graph.Node("b",
                  Graph.Node("c")),

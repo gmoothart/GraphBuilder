@@ -1,0 +1,47 @@
+
+h1. GraphBuilder
+
+A simple c# graph library with a fluent interface for graph construction and a
+minumum of syntactic noise.
+
+It is not industrial strength, the main emphasis is on prototyping and testing 
+graph algorithms. Graphs can be built quickly and individual nodes can contain 
+
+h1. Examples
+
+h3. Simple Cyclic Graph
+
+          [x]
+          / \
+       [y]   [w]
+          \ /
+          [a]
+         /   \
+       [b]    [d]
+        |      | \
+       [c]    [e] [f]
+              
+<pre><code>
+    var g1 = Graph.Node("a",
+               Graph.Node("b",
+                 Graph.Node("c")),
+               Graph.Node("d", 
+                 Graph.Node("e"),
+                 Graph.Node("f")));
+
+    var g2 = Graph.Node("x",
+               Graph.Node("y",
+                 g1),
+               Graph.Node("w",
+                 g1));
+</code></pre>
+
+h3. Graph with Anonymous types
+
+<pre><code>
+  var g = Graph.Node(new { Name="n1", Cost=2.5m },
+            Graph.Node(new { Name="n2", Cost=2.5m }),
+            Graph.Node(new { Name="n3", Cost=5.31m }));
+            
+
+</code></pre>

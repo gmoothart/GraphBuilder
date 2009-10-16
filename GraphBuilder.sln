@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphBuilder", "GraphBuilder\GraphBuilder.csproj", "{C3392287-6A57-4871-86D3-DA2C1B691266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphBuilderTests", "GraphBuilderTests\GraphBuilderTests.csproj", "{F4B98289-E9E2-4E9C-AD6E-5FC898EFCF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphAlgorithms", "GraphAlgorithms\GraphAlgorithms.csproj", "{C92409D0-2F53-4A1E-8FBD-E686565CF5F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7B3B5714-3CB2-431F-9BDB-5E7976A9A288}"
+	ProjectSection(SolutionItems) = preProject
+		readme.textile = readme.textile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3392287-6A57-4871-86D3-DA2C1B691266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3392287-6A57-4871-86D3-DA2C1B691266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3392287-6A57-4871-86D3-DA2C1B691266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3392287-6A57-4871-86D3-DA2C1B691266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B98289-E9E2-4E9C-AD6E-5FC898EFCF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B98289-E9E2-4E9C-AD6E-5FC898EFCF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B98289-E9E2-4E9C-AD6E-5FC898EFCF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B98289-E9E2-4E9C-AD6E-5FC898EFCF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92409D0-2F53-4A1E-8FBD-E686565CF5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92409D0-2F53-4A1E-8FBD-E686565CF5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92409D0-2F53-4A1E-8FBD-E686565CF5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92409D0-2F53-4A1E-8FBD-E686565CF5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

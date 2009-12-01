@@ -49,6 +49,7 @@
     <Compile Include="PriorityQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortestPaths.cs" />
+    <Compile Include="SpanningTrees.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GraphBuilder\GraphBuilder.csproj">

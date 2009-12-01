@@ -5,31 +5,40 @@ using System.Text;
 
 namespace GraphBuilder
 {
-  public class Graph
+
+  /// <summary>
+  /// A (possibly disconnected) graph object
+  /// </summary>
+  /// <typeparam name="T"></typeparam>
+  public class Graph<T>
   {
+    public bool Directed { get; set; }
 
-    /// <summary>
-    /// Create a Node object, with children. This is primarily useful because
-    /// this method will do type inference, allowing you to save on some typing
-    /// and even use anonymous types.
-    /// </summary>
-    public static Node<T> Node<T>(T data, params Node<T>[] children)
+    private HashSet<Node<T>> _nodes;
+
+    public Graph(bool directed, params Node<T>[] nodes)
     {
-      Node<T> n = new Node<T>(data, children);
-
-      return n;
+      Directed = directed;
+       
+      foreach (var node in nodes) {
+        Add(node);
+      }
     }
 
-    /// <summary>
-    /// Allows adding weights to the edges of a graph. The number of weights and
-    /// children must be equal. The first weight will be assigned to the first
-    /// child, etc.
-    /// </summary>
-    public static Node<T> Node<T>(T data, int[] weights, params Node<T>[] children)
-    {
-      Node<T> n = new Node<T>(data, weights, children);
+    public Graph(params Node<T>[] nodes) : this(true, nodes) { }
 
-      return n;
+    public void Add(Node<T> n)
+    {
+      _nodes.Add(n);
+
+      foreach(var child in n.BreadthFirst()) {
+        _nodes.Add(child);
+      }
+    }
+
+    public Node<T> this[int index]
+    {
+      get { _nodes. }
     }
   }
 }

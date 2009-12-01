@@ -6,6 +6,33 @@ using System.Text;
 
 namespace GraphBuilder
 {
+  public static class Node
+  {
+    /// <summary>
+    /// Create a Node object, with children. This is primarily useful because
+    /// this method will do type inference, allowing you to save on some typing
+    /// and even use anonymous types.
+    /// </summary>
+    public static Node<T> Create<T>(T data, params Node<T>[] children)
+    {
+      Node<T> n = new Node<T>(data, children);
+
+      return n;
+    }
+
+    /// <summary>
+    /// Allows adding weights to the edges of a graph. The number of weights and
+    /// children must be equal. The first weight will be assigned to the first
+    /// child, etc.
+    /// </summary>
+    public static Node<T> Create<T>(T data, int[] weights, params Node<T>[] children)
+    {
+      Node<T> n = new Node<T>(data, weights, children);
+
+      return n;
+    }
+  }
+
   public class Node<T>
   {
     private List<Node<T>> _adj = new List<Node<T>>();
@@ -82,5 +109,6 @@ namespace GraphBuilder
       // this is slow, but convenient. I expect the adjacency list to be small
       get { return _adj.Find(n => n.Data.Equals(data)); }
     }
+
   }
 }

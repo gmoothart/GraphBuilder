@@ -48,3 +48,14 @@ h3. Graph with Anonymous types
             
 
 </code></pre>
+
+h1. TODO
+
+h3. Algorithms/Data Structures I would like to implement:
+
+* Fibonacci heap (for better bound on Dijkstra's Shortest-Path)
+* Boruvka's minimum spanning tree (paralellized?)
+    http://www.ics.uci.edu/~eppstein/161/960206.html
+* Bellman-Ford shortest-path
+* Suffix tree
+* Red/Black or other ballanced binary tree
